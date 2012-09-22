@@ -55,9 +55,8 @@ class OrdersController < ApplicationController
        @list += @user_list
       end
     end
-    unless orders.nil?
-      @list += @list[0..-2]
-    end
+    
+    @list += @list[0..-2]
     @list += ']'
 
 =begin
