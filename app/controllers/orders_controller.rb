@@ -42,10 +42,12 @@ class OrdersController < ApplicationController
     users = User.where(:groups_id => @group_id)
     @list = '['
     orders = nil
+    enter = 0
     users.each do |u|
       orders = nil
       orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
       unless orders.nil?
+       enter = 1
        @user_list = '{"email": "' + u.email + '", "orders": ['  
        orders.each do |o|
          @user_list += '{"name": "' + o.item_name + '", "price": ' + o.price.to_s + '},'
@@ -55,8 +57,9 @@ class OrdersController < ApplicationController
        @list += @user_list
       end
     end
-    
-    @list = @list[0..-3]
+    unless enter == 0
+      @list = @list[0..-3]
+    end
     @list += ']'
 
 =begin

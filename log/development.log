@@ -11113,3 +11113,55 @@ Served asset /orders.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 07:26:27 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/getAllOrders?group_id=16" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 16
+  Rendered orders/getAllOrders.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /orders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /orders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 07:34:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
