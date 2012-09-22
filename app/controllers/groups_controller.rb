@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
   
   def test
-    arr = ["minh@gmail.com", "two@gmail.com", "three@gmail.com"]
     var = "\"test@test.com\", \"test2@test.com\""
     @json = '{"emails": [' + var + '], "leader": "leader@lead.com"}'
   end
@@ -25,7 +24,7 @@ class GroupsController < ApplicationController
     user.save
     group.name = user.email
     group.save 
-    @json = "{\"group_id\": " + group.id.to_s + " }".to_json
+    @json = "{\"group_id\": " + group.id.to_s + " }"
    end
 
   def test_getGroup

@@ -5,6 +5,8 @@ Paypal::Application.routes.draw do
   match '/test', :to => "groups#test" 
   match '/test2', :to => "groups#test_getGroup" 
   match '/getGroup', :to => "groups#getGroup" 
+  match '/test_submitOrder', :to => "orders#test_submitOrder" 
+  match '/submitOrder', :to => "orders#submitOrder" 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

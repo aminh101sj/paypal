@@ -1,5 +1,5 @@
-<h1> Test Form </h1>
-
+<h1> createGroup API Form </h1>
+<p> <%= @json %> </p>
 <form action="/createGroup" method="post">
   <input type="hidden" name="info" value='<%= @json %>' />
   <button type="submit"> Submit </button>
