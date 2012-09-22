@@ -24,6 +24,7 @@ class GroupsController < ApplicationController
 
     user = User.where(:email => @group_info["leader"]).first
     group.users << user
+    group.leader_id = user.id
     user.save
     group.name = user.email
     group.save 
