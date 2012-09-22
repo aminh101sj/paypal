@@ -38,8 +38,23 @@ class OrdersController < ApplicationController
   end
 
   def getAllOrders
-    @group = ActiveSupport::JSON.decode(params[:info])
-    @group_id = @group["group_id"] 
+    @group_id = params["group_id"] 
+    users = User.where(:groups_id => @group_id)
+    @list = '['
+    users.each do |u|
+      orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
+      @user_list = '{"email": "' + u.email + '", "orders": ['  
+      orders.each do |o|
+        @user_list += '{"name": "' + o.item_name + '", "price": ' + o.price.to_s + '},'
+      end
+      @user_list = @user_list[0..-2]
+      @user_list += ']}, '
+      @list += @user_list
+    end
+    @list += @list[0..-2]
+    @list += ']'
+
+=begin
     orders = Orders.where(:groups_id => @group_id)
     @list = '['
     orders.each do |o|
@@ -48,7 +63,7 @@ class OrdersController < ApplicationController
     end  
     @list = @list[0..-2] 
     @list += ']'
-    
+=end
   end
 
   def test_successfulPayments
