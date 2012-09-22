@@ -11,9 +11,14 @@ class OrdersController < ApplicationController
   end
 
   def submitOrder
-    @orders = ActiveSupport::JSON.decode(params[:info])  
-    @email = @orders["email"]
-    @group_id = @orders["group_id"]
+   @group_id = params[:group_id]
+   @email = params[:email]
+   @orders = ActiveSupport::JSON.decode(params[:order])
+
+    #@orders = ActiveSupport::JSON.decode(params[:info])  
+    #@email = @orders["email"]
+    #@group_id = @orders["group_id"]
+    
     user = User.where(:email => @email).first
     
     @orders["orders"].each do |order| 
