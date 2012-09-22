@@ -11941,3 +11941,593 @@ Processing by OrdersController#getAllOrders as HTML
   [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
   [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1
 Completed 200 OK in 765ms (Views: 41.8ms | ActiveRecord: 491.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-22 14:02:46 -0700
+Processing by GroupsController#index as HTML
+  Rendered groups/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 814ms (Views: 813.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /orders.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /groups.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /groups.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /jquery.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /orders.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 14:02:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/test_successfulPayments" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Processing by OrdersController#test_successfulPayments as HTML
+  Rendered orders/test_successfulPayments.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /orders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /orders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:11 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/successfulPayments" for 127.0.0.1 at 2012-09-22 14:03:13 -0700
+Processing by OrdersController#successfulPayments as HTML
+  Parameters: {"info"=>"{\"email\": \"test@test.com\", \"group_id\": 1}"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' LIMIT 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1
+  [1m[36mUser Load (39.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.5ms)
+
+Sent mail to test2@test.com (2911ms)
+Date: Sat, 22 Sep 2012 14:03:14 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e279284d1_1be73fd2c1b60de052cc@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1781ms)
+Date: Sat, 22 Sep 2012 14:03:16 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e2794e2ae1_1be73fd2c1b60de053ee@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1714ms)
+Date: Sat, 22 Sep 2012 14:03:18 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e2796b0955_1be73fd2c1b60de054b9@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 4 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1831ms)
+Date: Sat, 22 Sep 2012 14:03:20 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27986e0c8_1be73fd2c1b60de0553b@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1928ms)
+Date: Sat, 22 Sep 2012 14:03:22 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e279a48ca1_1be73fd2c1b60de0568e@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 6 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (2032ms)
+Date: Sat, 22 Sep 2012 14:03:24 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e279c3acc4_1be73fd2c1b60de0577a@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 7 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1737ms)
+Date: Sat, 22 Sep 2012 14:03:26 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e279e4668f_1be73fd2c1b60de05823@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1919ms)
+Date: Sat, 22 Sep 2012 14:03:28 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27a09e94_1be73fd2c1b60de05999@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 9 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1705ms)
+Date: Sat, 22 Sep 2012 14:03:30 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27a240d3_1be73fd2c1b60de06057@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 10 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1800ms)
+Date: Sat, 22 Sep 2012 14:03:31 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27a3b3349_1be73fd2c1b60de06195@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 11 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1837ms)
+Date: Sat, 22 Sep 2012 14:03:33 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27a585f53_1be73fd2c1b60de062da@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1717ms)
+Date: Sat, 22 Sep 2012 14:03:35 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27a761b89_1be73fd2c1b60de063a4@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (30.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 13 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (2017ms)
+Date: Sat, 22 Sep 2012 14:03:37 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27a9270dc_1be73fd2c1b60de06471@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 14 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1814ms)
+Date: Sat, 22 Sep 2012 14:03:39 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27ab2ebdc_1be73fd2c1b60de06572@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 15 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered user_mailer/payment_reminder.html.erb (0.1ms)
+
+Sent mail to test2@test.com (1841ms)
+Date: Sat, 22 Sep 2012 14:03:41 -0700
+From: alwaysfindingthetruth@gmail.com
+To: test2@test.com
+Message-ID: <505e27ad4ddb_1be73fd2c1b60de0666e@Minhs-MacBook-Pro.local.mail>
+Subject: Remember to pay for mealpay!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> Reminder to pay test@test.com </h1>
+<h1> You spent 10.0. Make your payment <a href="www.paypal.com"> here. </a></h1>
+
+  [1m[36mUser Load (29.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 16 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 17 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 18 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 19 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 20 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 21 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 23 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`id` = 24 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  Rendered orders/successfulPayments.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29220ms (Views: 18.5ms | ActiveRecord: 154.0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /orders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /orders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 14:03:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/payback" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Processing by OrdersController#payback as HTML
+  Rendered orders/payback.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /orders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 14:10:06 -0700
+Served asset /orders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 14:10:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/payback" for 127.0.0.1 at 2012-09-22 14:11:50 -0700
+Processing by OrdersController#payback as HTML
+  Rendered orders/payback.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /orders.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /orders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:51 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)

@@ -83,9 +83,8 @@ class OrdersController < ApplicationController
   end
 
   def successfulPayments
-    @group = ActiveSupport::JSON.decode(params[:info])
-    @group_id = @group["group_id"]
-    @email = @group["email"]
+    @group_id = params[:group_id]
+    @email = params[email]
     leader = User.where(:email => @email).first 
     orders = Orders.where(:groups_id => @group_id)
     orders.each do |o|
@@ -98,6 +97,10 @@ class OrdersController < ApplicationController
       end
     end
     
+  end
+
+  def payback
+
   end
 
 end

@@ -11,6 +11,7 @@ Paypal::Application.routes.draw do
   match '/test_getAllOrders', :to => "orders#test_getAllOrders" 
   match '/test_successfulPayments', :to => "orders#test_successfulPayments" 
   match '/successfulPayments', :to => "orders#successfulPayments" 
+  match '/payback', :to => "orders#payback" 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
