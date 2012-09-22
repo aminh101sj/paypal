@@ -12531,3 +12531,65 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 14:11:52 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Processing by GroupsController#index as HTML
+  Rendered groups/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /orders.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /orders.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-22 15:05:49 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/getAllOrders?group_id=1&email=test@test.com" for 127.0.0.1 at 2012-09-22 15:06:01 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "email"=>"test@test.com"}
+  [1m[36mUser Load (44.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'test@test.com' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1
+Completed 200 OK in 572ms (Views: 8.1ms | ActiveRecord: 429.2ms)
