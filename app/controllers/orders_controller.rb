@@ -59,7 +59,7 @@ class OrdersController < ApplicationController
       users.each do |u|
         orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
         orders.each do |o|
-          if o.completed == 0 
+          if o.completed.to_s == 0.to_s 
             if u.id.to_s == leader.id.to_s
               leaders_price += o.price
             else
