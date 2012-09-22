@@ -11232,3 +11232,14 @@ Processing by OrdersController#getAllOrders as HTML
   [1m[36mOrders Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
   [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
 Completed 200 OK in 79ms (Views: 0.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/getAllOrders?group_id=1" for 127.0.0.1 at 2012-09-22 08:07:47 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 7.2ms)
