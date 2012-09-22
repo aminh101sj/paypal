@@ -48,7 +48,7 @@ class OrdersController < ApplicationController
       orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
       unless orders.nil?
        enter = 1
-       @user_list = '"' + u.email + '" => ['  
+       @user_list = '"' + u.email + '" : ['  
        orders.each do |o|
          @user_list += '{"name": "' + o.item_name + '", "price": ' + o.price.to_s + '},'
        end
@@ -61,8 +61,15 @@ class OrdersController < ApplicationController
       @list = @list[0..-3]
     end
     @list += '}'
-     
-    render :json => @list
+    
+
+    response = {};
+    users.each do |u|
+      orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
+      next if (orders.nil? || orders.empty?);
+      response[u.email] = orders;
+    end 
+    render :json => response;
 =begin
     orders = Orders.where(:groups_id => @group_id)
     @list = '['
