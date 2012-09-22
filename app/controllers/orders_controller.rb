@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
       end
     end
     
-    @list += @list[0..-2]
+    @list = @list[0..-3]
     @list += ']'
 
 =begin
