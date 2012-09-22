@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     
     user = User.where(:email => @email).first
     
-    @orders["orders"].each do |order| 
+    @orders.each do |order| 
       o = Orders.new     
       o.users_id = user.id
       o.groups_id = @group_id
