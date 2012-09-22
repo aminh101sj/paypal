@@ -99,7 +99,7 @@ class OrdersController < ApplicationController
 
     response = {}
     response["success"] = 1
-    render :json => reponse    
+    render :json => response    
   end
 
   def payback
