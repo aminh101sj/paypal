@@ -1,0 +1,9 @@
+<h1> /successfulPayment api </h1>
+<p> json format: </p>
+<p> <%= @json %> </p>
+
+<form action="/successfulPayments" method="post">
+  <input name="info" value="<%= @json %>" />
+  <button type="submit"> Submit </button>
+</form>
+
