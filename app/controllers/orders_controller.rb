@@ -96,7 +96,10 @@ class OrdersController < ApplicationController
         UserMailer.payment_reminder(user.email, o.price, @email).deliver
       end
     end
-    
+
+    response = {}
+    response["success"] = 1
+    render :json => reponse    
   end
 
   def payback
