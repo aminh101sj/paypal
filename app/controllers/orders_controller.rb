@@ -84,7 +84,7 @@ class OrdersController < ApplicationController
 
   def successfulPayments
     @group_id = params[:group_id]
-    @email = params[email]
+    @email = params[:email]
     leader = User.where(:email => @email).first 
     orders = Orders.where(:groups_id => @group_id)
     orders.each do |o|
