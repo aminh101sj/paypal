@@ -11929,3 +11929,15 @@ Processing by OrdersController#getAllOrders as HTML
   [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
   [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
 Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/getAllOrders?group_id=1&email=test3@test.com" for 127.0.0.1 at 2012-09-22 13:15:38 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "email"=>"test3@test.com"}
+  [1m[36mUser Load (106.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'test3@test.com' LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (21.6ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1
+Completed 200 OK in 765ms (Views: 41.8ms | ActiveRecord: 491.6ms)

@@ -68,6 +68,9 @@ class OrdersController < ApplicationController
         end
       end 
     end
+
+    ordersA = Orders.where(:groups_id => @group_id)
+    response["orders"] = ordersA
     response["my_price"] = leaders_price
     response["others_price"] = others_price
     response["total_price"] = total_price
