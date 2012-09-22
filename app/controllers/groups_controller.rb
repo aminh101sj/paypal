@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  def index
+
+  end
   
   def test
     var = "\"test@test.com\", \"test2@test.com\""

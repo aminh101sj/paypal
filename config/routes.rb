@@ -1,9 +1,9 @@
 Paypal::Application.routes.draw do
   resources :users
-  root :to => "groups#createGroup"
+  root :to => "groups#index"
   match '/createGroup', :to => "groups#createGroup" 
-  match '/test', :to => "groups#test" 
-  match '/test2', :to => "groups#test_getGroup" 
+  match '/test_createGroup', :to => "groups#test" 
+  match '/test_getGroup', :to => "groups#test_getGroup" 
   match '/getGroup', :to => "groups#getGroup" 
   match '/test_submitOrder', :to => "orders#test_submitOrder" 
   match '/submitOrder', :to => "orders#submitOrder" 

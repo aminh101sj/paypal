@@ -1,0 +1,7 @@
+<h1> Order Form </h1>
+<p> json format: </p>
+<p> <%= @json %> </p>
+<form action="/submitOrder" method="post">
+  <input name="info" value="<%= @json %>" />
+  <button type="submit"> Submit </button>
+</form>
