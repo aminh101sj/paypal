@@ -37,21 +37,27 @@ class OrdersController < ApplicationController
     @json = '{"group_id": 1}'
   end
 
-  def getAllOrders
+  def getAllOrders   
     @group_id = params["group_id"] 
     users = User.where(:groups_id => @group_id)
     @list = '['
+    orders = nil
     users.each do |u|
+      orders = nil
       orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
-      @user_list = '{"email": "' + u.email + '", "orders": ['  
-      orders.each do |o|
-        @user_list += '{"name": "' + o.item_name + '", "price": ' + o.price.to_s + '},'
+      unless orders.nil?
+       @user_list = '{"email": "' + u.email + '", "orders": ['  
+       orders.each do |o|
+         @user_list += '{"name": "' + o.item_name + '", "price": ' + o.price.to_s + '},'
+       end
+       @user_list = @user_list[0..-2]
+       @user_list += ']}, '
+       @list += @user_list
       end
-      @user_list = @user_list[0..-2]
-      @user_list += ']}, '
-      @list += @user_list
     end
-    @list += @list[0..-2]
+    unless orders.nil?
+      @list += @list[0..-2]
+    end
     @list += ']'
 
 =begin
