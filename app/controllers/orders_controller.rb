@@ -55,7 +55,7 @@ class OrdersController < ApplicationController
     total_price = 0
     others_price = 0
     leaders_price = 0
-    unless leader.nil? 
+    unless leader.nil? || leader.groups_id.to_s != @group_id.to_s 
       users.each do |u|
         orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
         orders.each do |o|
