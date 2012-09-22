@@ -34,12 +34,13 @@ class OrdersController < ApplicationController
   end
 
   def test_getAllOrders
-    @json = '{"group_id": 1}'
+    @json = '{"group_id": 1, "email": test@test.com}'
   end
 
   def getAllOrders   
-    @group_id = params["group_id"]
-    leader = params["user_id"] 
+    @group_id = params[:group_id]
+    email = params[:email]
+    leader = User.where(:email => email).first 
     users = User.where(:groups_id => @group_id)
     response = {};
 
@@ -54,17 +55,19 @@ class OrdersController < ApplicationController
     total_price = 0
     others_price = 0
     leaders_price = 0
-    users.each do |u|
-      orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
-      orders.each do |o|
-        if u.id.to_s == leader.to_s
-          leaders_price += o.price
-        else
-          others_price += o.price
-        end 
-        total_price += o.price
-      end
-    end 
+    unless leader.nil? 
+      users.each do |u|
+        orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
+        orders.each do |o|
+          if u.id.to_s == leader.id.to_s
+            leaders_price += o.price
+          else
+            others_price += o.price
+          end 
+          total_price += o.price
+        end
+      end 
+    end
     response["my_price"] = leaders_price
     response["others_price"] = others_price
     response["total_price"] = total_price
