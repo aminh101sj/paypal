@@ -61,7 +61,8 @@ class OrdersController < ApplicationController
       @list = @list[0..-3]
     end
     @list += ']'
-
+     
+    render :json => @list
 =begin
     orders = Orders.where(:groups_id => @group_id)
     @list = '['
