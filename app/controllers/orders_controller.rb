@@ -52,19 +52,23 @@ class OrdersController < ApplicationController
   end
 
   def test_successfulPayments
-    @json = '{"group_id": 1}'  
+    @json = '{"email": "test@test.com", "group_id": 1}'  
   end
 
   def successfulPayments
     @group = ActiveSupport::JSON.decode(params[:info])
     @group_id = @group["group_id"]
+    @email = @group["email"]
+    leader = User.where(:email => @email).first 
     orders = Orders.where(:groups_id => @group_id)
     orders.each do |o|
       user = User.where(:id => o.users_id).first
       order = Orders.where(:id => o.id).first
       order.completed = true
-      order.save  
-      UserMailer.payment_reminder("aminh101sj@gmail.com", o.price).deliver
+      order.save 
+      unless leader.id == user.id 
+        UserMailer.payment_reminder(user.email, o.price, @email).deliver
+      end
     end
     
   end
