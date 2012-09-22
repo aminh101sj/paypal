@@ -38,48 +38,38 @@ class OrdersController < ApplicationController
   end
 
   def getAllOrders   
-    @group_id = params["group_id"] 
+    @group_id = params["group_id"]
+    leader = params["user_id"] 
     users = User.where(:groups_id => @group_id)
-    @list = '{'
-    orders = nil
-    enter = 0
-    users.each do |u|
-      orders = nil
-      orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
-      unless orders.nil?
-       enter = 1
-       @user_list = '"' + u.email + '" : ['  
-       orders.each do |o|
-         @user_list += '{"name": "' + o.item_name + '", "price": ' + o.price.to_s + '},'
-       end
-       @user_list = @user_list[0..-2]
-       @user_list += '], '
-       @list += @user_list
-      end
-    end
-    unless enter == 0
-      @list = @list[0..-3]
-    end
-    @list += '}'
-    
-
     response = {};
+
+=begin
     users.each do |u|
       orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
       next if (orders.nil? || orders.empty?);
       response[u.email] = orders;
     end 
-    render :json => response;
-=begin
-    orders = Orders.where(:groups_id => @group_id)
-    @list = '['
-    orders.each do |o|
-      u = User.where(:id => o.users_id).first
-      @list += '{"email": "' + u.email + '", "item_name": "' + o.item_name + '", "price": '+ o.price.to_s + ' },'
-    end  
-    @list = @list[0..-2] 
-    @list += ']'
 =end
+    
+    total_price = 0
+    others_price = 0
+    leaders_price = 0
+    users.each do |u|
+      orders = Orders.where(:groups_id => @group_id, :users_id => u.id)
+      orders.each do |o|
+        if u.id.to_s == leader.to_s
+          leaders_price += o.price
+        else
+          others_price += o.price
+        end 
+        total_price += o.price
+      end
+    end 
+    response["my_price"] = leaders_price
+    response["others_price"] = others_price
+    response["total_price"] = total_price
+    render :json => response;
+
   end
 
   def test_successfulPayments

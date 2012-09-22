@@ -11270,3 +11270,157 @@ Processing by OrdersController#getAllOrders as HTML
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
 Completed 200 OK in 78ms (Views: 39.5ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=1" for 127.0.0.1 at 2012-09-22 08:35:06 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 08:38:05 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 08:38:19 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=3" for 127.0.0.1 at 2012-09-22 08:38:22 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=0" for 127.0.0.1 at 2012-09-22 08:38:54 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"0"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.6ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=1" for 127.0.0.1 at 2012-09-22 08:38:56 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=1" for 127.0.0.1 at 2012-09-22 08:39:16 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.4ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 08:39:19 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=1" for 127.0.0.1 at 2012-09-22 08:39:22 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 08:39:26 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 08:40:11 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 08:40:55 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.2ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.2ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=1" for 127.0.0.1 at 2012-09-22 08:40:58 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1
+  [1m[36mOrders Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2[0m
+  [1m[35mOrders Load (0.6ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3
+  [1m[36mOrders Load (0.5ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/getAllOrders?group_id=1&user_id=2" for 127.0.0.1 at 2012-09-22 09:04:02 -0700
+Processing by OrdersController#getAllOrders as HTML
+  Parameters: {"group_id"=>"1", "user_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`groups_id` = 1
+  [1m[36mOrders Load (2.5ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 1[0m
+  [1m[35mOrders Load (0.5ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 2
+  [1m[36mOrders Load (0.8ms)[0m  [1mSELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 3[0m
+  [1m[35mOrders Load (0.3ms)[0m  SELECT `orders`.* FROM `orders` WHERE `orders`.`groups_id` = 1 AND `orders`.`users_id` = 4
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 4.5ms)
